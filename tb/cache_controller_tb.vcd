@@ -1,0 +1,533 @@
+$date
+	Mon May 18 18:55:36 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module cache_controller_tb $end
+$var wire 1 ! mwren $end
+$var wire 1 " mrden $end
+$var wire 256 # mdout [255:0] $end
+$var wire 256 $ mdin [255:0] $end
+$var wire 18 % maddress [17:0] $end
+$var wire 1 & hit $end
+$var wire 32 ' cdout [31:0] $end
+$var parameter 32 ( ADDRESS_WIDTH $end
+$var parameter 32 ) BLOCK_SIZE $end
+$var parameter 32 * INDEX_WIDTH $end
+$var parameter 32 + NBLOCKS $end
+$var parameter 32 , OFFSET_WIDTH $end
+$var parameter 32 - TAG_WIDTH $end
+$var parameter 32 . WORD_SIZE $end
+$var reg 21 / caddress [20:0] $end
+$var reg 32 0 cdin [31:0] $end
+$var reg 1 1 clock $end
+$var reg 1 2 rden $end
+$var reg 1 3 rst_n $end
+$var reg 1 4 wren $end
+$scope module DUT_CACHE $end
+$var wire 21 5 caddress [20:0] $end
+$var wire 32 6 cdin [31:0] $end
+$var wire 1 1 clock $end
+$var wire 1 & hit $end
+$var wire 1 7 lookup_hit $end
+$var wire 1 2 rden $end
+$var wire 1 3 rst_n $end
+$var wire 1 4 wren $end
+$var wire 32 8 read_data [31:0] $end
+$var wire 256 9 mdin [255:0] $end
+$var wire 8 : active_tag [7:0] $end
+$var wire 3 ; active_offset [2:0] $end
+$var wire 10 < active_index [9:0] $end
+$var wire 21 = active_addr [20:0] $end
+$var parameter 32 > ADDRESS_WIDTH $end
+$var parameter 32 ? BLOCK_OFFSET_LSB $end
+$var parameter 32 @ BLOCK_OFFSET_MSB $end
+$var parameter 32 A BLOCK_SIZE $end
+$var parameter 32 B INDEX_LSB $end
+$var parameter 32 C INDEX_MSB $end
+$var parameter 32 D INDEX_WIDTH $end
+$var parameter 32 E NBLOCKS $end
+$var parameter 32 F OFFSET_WIDTH $end
+$var parameter 32 G TAG_LSB $end
+$var parameter 32 H TAG_MSB $end
+$var parameter 32 I TAG_WIDTH $end
+$var parameter 32 J WORD_SIZE $end
+$var reg 32 K cdout [31:0] $end
+$var reg 3 L current_state [2:0] $end
+$var reg 18 M maddress [17:0] $end
+$var reg 256 N mdout [255:0] $end
+$var reg 1 " mrden $end
+$var reg 1 ! mwren $end
+$var reg 3 O next_state [2:0] $end
+$var reg 21 P req_addr [20:0] $end
+$var reg 1 Q req_read $end
+$var reg 32 R req_wdata [31:0] $end
+$var reg 1 S req_write $end
+$var integer 32 T k [31:0] $end
+$scope function block_get_word $end
+$upscope $end
+$scope function block_set_word $end
+$upscope $end
+$upscope $end
+$scope module DUT_MEM $end
+$var wire 18 U address [17:0] $end
+$var wire 1 1 clock $end
+$var wire 256 V din [255:0] $end
+$var wire 1 " rden $end
+$var wire 1 ! wren $end
+$var parameter 32 W ADDRESS_WIDTH $end
+$var parameter 32 X BLOCK_SIZE $end
+$var parameter 32 Y DEPTH $end
+$var parameter 96 Z FILE $end
+$var reg 256 [ dout [255:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11011010110010101101101010111110110010001100001011101000110000100101110011101000111100001110100 Z
+b1000000000000000000 Y
+b100000000 X
+b10010 W
+b100000 J
+b1000 I
+b10100 H
+b1101 G
+b11 F
+b10000000000 E
+b1010 D
+b1100 C
+b11 B
+b100000000 A
+b10 @
+b0 ?
+b10101 >
+b100000 .
+b1000 -
+b11 ,
+b10000000000 +
+b1010 *
+b100000000 )
+b10101 (
+$end
+#0
+$dumpvars
+bx [
+b0 V
+b0 U
+b10000000000 T
+xS
+bx R
+xQ
+bx P
+b0 O
+b0 N
+b0 M
+b0 L
+b0 K
+bx =
+bx <
+bx ;
+bx :
+bx 9
+bx 8
+x7
+bx 6
+bx 5
+x4
+x3
+x2
+11
+bx 0
+bx /
+b0 '
+x&
+b0 %
+bx $
+b0 #
+0"
+0!
+$end
+#100000
+01
+#200000
+11
+#300000
+01
+#400000
+11
+#500000
+01
+#600000
+11
+#700000
+01
+#800000
+11
+#900000
+01
+#1000000
+11
+#1100000
+01
+#1200000
+11
+#1300000
+01
+#1400000
+11
+#1500000
+01
+#1600000
+11
+#1700000
+01
+#1800000
+11
+#1900000
+01
+#2000000
+0S
+0Q
+b10000000000 T
+11
+03
+#2100000
+01
+#2200000
+b10000000000 T
+11
+#2300000
+01
+#2400000
+b10000000000 T
+11
+#2500000
+01
+#2600000
+b10000000000 T
+11
+#2700000
+01
+#2800000
+b10000000000 T
+11
+#2900000
+01
+#3000000
+b10000000000 T
+11
+#3100000
+01
+#3200000
+b10000000000 T
+11
+#3300000
+01
+#3400000
+b10000000000 T
+11
+#3500000
+01
+#3600000
+b10000000000 T
+11
+#3700000
+01
+#3800000
+b10000000000 T
+11
+#3900000
+01
+#4000000
+0&
+07
+b0 8
+b0 <
+b0 :
+b100 ;
+b10 O
+b100 =
+04
+12
+b0 0
+b0 6
+b100 /
+b100 5
+11
+13
+#4100000
+01
+#4200000
+b110 O
+b0 R
+1Q
+b100 P
+b10 L
+11
+#4300000
+01
+#4400000
+b111 O
+1"
+b110 L
+11
+#4500000
+01
+#4600000
+b1 O
+0"
+b0 $
+b0 9
+b0 [
+b111 L
+11
+#4700000
+01
+#4800000
+1&
+17
+b0 O
+b1 L
+11
+#4900000
+01
+#5000000
+b1 O
+b0 L
+11
+#5100000
+01
+#5200000
+b0 O
+b1 L
+11
+#5300000
+01
+#5400000
+b1 O
+b0 L
+11
+#5500000
+01
+#5600000
+b0 O
+b1 L
+11
+#5700000
+01
+#5800000
+b1 O
+b0 L
+11
+#5900000
+01
+#6000000
+b0 O
+b1 L
+11
+#6100000
+01
+#6200000
+b1 O
+b0 L
+11
+#6300000
+01
+#6400000
+b0 O
+b1 L
+11
+#6500000
+01
+#6600000
+b1 O
+b0 L
+11
+#6700000
+01
+#6800000
+b0 O
+b1 L
+11
+#6900000
+01
+#7000000
+b1 O
+b0 L
+11
+#7100000
+01
+#7200000
+b0 O
+b1 L
+11
+#7300000
+01
+#7400000
+b1 O
+b0 L
+11
+#7500000
+01
+#7600000
+b0 O
+b1 L
+11
+#7700000
+01
+#7800000
+b1 O
+b0 L
+11
+#7900000
+01
+#8000000
+b0 O
+b1 L
+b10111010110111011011111011101111 0
+b10111010110111011011111011101111 6
+b101 /
+b101 5
+11
+#8100000
+01
+#8200000
+b101 ;
+b1 O
+b101 =
+b0 L
+11
+#8300000
+01
+#8400000
+b0 O
+b10111010110111011011111011101111 R
+b101 P
+b1 L
+11
+#8500000
+01
+#8600000
+b1 O
+b0 L
+11
+#8700000
+01
+#8800000
+b0 O
+b1 L
+11
+#8900000
+01
+#9000000
+b1 O
+b0 L
+11
+#9100000
+01
+#9200000
+b0 O
+b1 L
+11
+#9300000
+01
+#9400000
+b1 O
+b0 L
+11
+#9500000
+01
+#9600000
+b0 O
+b1 L
+11
+#9700000
+01
+#9800000
+b1 O
+b0 L
+11
+#9900000
+01
+#10000000
+b0 O
+b1 L
+b0 0
+b0 6
+b110 /
+b110 5
+11
+#10100000
+01
+#10200000
+b110 ;
+b1 O
+b110 =
+b0 L
+11
+#10300000
+01
+#10400000
+b0 O
+b0 R
+b110 P
+b1 L
+11
+#10500000
+01
+#10600000
+b1 O
+b0 L
+11
+#10700000
+01
+#10800000
+b0 O
+b1 L
+11
+#10900000
+01
+#11000000
+b1 O
+b0 L
+11
+#11100000
+01
+#11200000
+b0 O
+b1 L
+11
+#11300000
+01
+#11400000
+b1 O
+b0 L
+11
+#11500000
+01
+#11600000
+b0 O
+b1 L
+11
+#11700000
+01
+#11800000
+b1 O
+b0 L
+11
+#11900000
+01
+#12000000
+b0 O
+b1 L
+b10101010101010101010101010101010 0
+b10101010101010101010101010101010 6
+b111 /
+b111 5
+11
+#12050000
