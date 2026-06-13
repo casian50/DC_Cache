@@ -1,0 +1,34 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Timotei/OneDrive/Desktop/DC_ALU
+vcache_controller_tb
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1781343767
+!i10b 1
+!s100 z;]`TGJhK4lYBCa`6Oah:1
+I0<bkKQm6_dCd0FhcC2?Z62
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 cache_controller_tb_sv_unit
+S1
+dC:/Users/Timotei/OneDrive/Desktop/DC_Cache
+w1781342765
+8C:/Users/Timotei/OneDrive/Desktop/DC_Cache/tb/cache_controller_tb.sv
+FC:/Users/Timotei/OneDrive/Desktop/DC_Cache/tb/cache_controller_tb.sv
+L0 3
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1781343767.000000
+!s107 C:/Users/Timotei/OneDrive/Desktop/DC_Cache/tb/cache_controller_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Timotei/OneDrive/Desktop/DC_Cache/tb/cache_controller_tb.sv|
+!i113 1
+o-work work -sv
+tCvgOpt 0
