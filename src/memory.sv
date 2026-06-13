@@ -15,8 +15,8 @@ module memory
     );
 
    localparam DEPTH = 2 ** 18;
-   
-   
+
+
    reg [BLOCK_SIZE-1:0] mem [0:DEPTH-1];
 
 
@@ -45,9 +45,3 @@ module memory
      end
 
 endmodule // memory
-
-   
-       
-        
-   
-   
