@@ -261,21 +261,6 @@ module cache_controller
    end
 
    //--------------------------------------------------------------------------
-   // Power-up initialisation (for simulation)
-   //--------------------------------------------------------------------------
-   integer si, ki;
-   initial begin
-      for (si = 0; si < NSETS; si = si + 1)
-         for (ki = 0; ki < NWAYS; ki = ki + 1) begin
-            cache_valid[si][ki] = 1'b0;
-            cache_dirty[si][ki] = 1'b0;
-            cache_tag[si][ki]   = '0;
-            cache_mem[si][ki]   = '0;
-            lru_cnt[si][ki]     = WAY_WIDTH'(ki); // distinct initial ranks
-         end
-   end
-
-   //--------------------------------------------------------------------------
    // Sequential update
    //--------------------------------------------------------------------------
    integer su, ku;

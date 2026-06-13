@@ -31,13 +31,13 @@ module memory
             mem[i] = {BLOCK_SIZE{1'b0}};
      end
 
-   always_ff @(posedge clock)
+   always @(posedge clock)
      begin
         if (wren)
           mem[address] <= din;
      end
 
-   always_ff @(posedge clock)
+   always @(posedge clock)
      begin
         if (rden)
           dout <= mem[address];
