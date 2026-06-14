@@ -8,27 +8,75 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/Timotei/OneDrive/Desktop/DC_ALU
-vcache_controller_tb
-DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1781344174
+vcache_controller
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1781346060
 !i10b 1
-!s100 z;]`TGJhK4lYBCa`6Oah:1
-I0<bkKQm6_dCd0FhcC2?Z62
-VDg1SIo80bB@j0V0VzS_@n1
-!s105 cache_controller_tb_sv_unit
+!s100 8dA4mHNP:oO5Y82_;:ZiF0
+I7Fof>_K_f2z6;03Q3OSYU0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 cache_controller_sv_unit
 S1
-dC:/Users/Timotei/OneDrive/Desktop/DC_Cache
-w1781342765
-8C:/Users/Timotei/OneDrive/Desktop/DC_Cache/tb/cache_controller_tb.sv
-FC:/Users/Timotei/OneDrive/Desktop/DC_Cache/tb/cache_controller_tb.sv
-L0 3
-OV;L;10.5b;63
+Z3 dC:/Users/PC/Desktop/Cache_Project/DC_Cache
+Z4 w1781344786
+8C:/Users/PC/Desktop/Cache_Project/DC_Cache/src/cache_controller.sv
+FC:/Users/PC/Desktop/Cache_Project/DC_Cache/src/cache_controller.sv
+L0 19
+Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1781344174.000000
-!s107 C:/Users/Timotei/OneDrive/Desktop/DC_Cache/tb/cache_controller_tb.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Timotei/OneDrive/Desktop/DC_Cache/tb/cache_controller_tb.sv|
+Z6 !s108 1781346060.000000
+!s107 C:/Users/PC/Desktop/Cache_Project/DC_Cache/src/cache_controller.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/PC/Desktop/Cache_Project/DC_Cache/src/cache_controller.sv|
 !i113 1
-o-work work -sv
-tCvgOpt 0
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+vcache_controller_tb
+R0
+R1
+!i10b 1
+!s100 z;]`TGJhK4lYBCa`6Oah:1
+IkVIc?CC;Xc>WZ?;STUPna1
+R2
+!s105 cache_controller_tb_sv_unit
+S1
+R3
+R4
+8C:/Users/PC/Desktop/Cache_Project/DC_Cache/tb/cache_controller_tb.sv
+FC:/Users/PC/Desktop/Cache_Project/DC_Cache/tb/cache_controller_tb.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/PC/Desktop/Cache_Project/DC_Cache/tb/cache_controller_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/PC/Desktop/Cache_Project/DC_Cache/tb/cache_controller_tb.sv|
+!i113 1
+R7
+R8
+vmemory
+R0
+R1
+!i10b 1
+!s100 >nO0K;RIRh0fSKOA4X<Mc3
+I`Lhg;KBHm@E^eJ@X4SYbI2
+R2
+!s105 memory_sv_unit
+S1
+R3
+R4
+8C:/Users/PC/Desktop/Cache_Project/DC_Cache/src/memory.sv
+FC:/Users/PC/Desktop/Cache_Project/DC_Cache/src/memory.sv
+L0 2
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/PC/Desktop/Cache_Project/DC_Cache/src/memory.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/PC/Desktop/Cache_Project/DC_Cache/src/memory.sv|
+!i113 1
+R7
+R8

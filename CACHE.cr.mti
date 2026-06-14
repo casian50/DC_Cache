@@ -1,0 +1,22 @@
+C:/Users/PC/Desktop/Cache_Project/DC_Cache/src/memory.sv {1 {vlog -work work -sv -stats=none C:/Users/PC/Desktop/Cache_Project/DC_Cache/src/memory.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module memory
+
+Top level modules:
+	memory
+
+} {} {}} C:/Users/PC/Desktop/Cache_Project/DC_Cache/tb/cache_controller_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/PC/Desktop/Cache_Project/DC_Cache/tb/cache_controller_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module cache_controller_tb
+
+Top level modules:
+	cache_controller_tb
+
+} {} {}} C:/Users/PC/Desktop/Cache_Project/DC_Cache/src/cache_controller.sv {1 {vlog -work work -sv -stats=none C:/Users/PC/Desktop/Cache_Project/DC_Cache/src/cache_controller.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module cache_controller
+
+Top level modules:
+	cache_controller
+
+} {} {}}
