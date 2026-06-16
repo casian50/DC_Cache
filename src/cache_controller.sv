@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-//============================================================================
+//=================
 //  32 KiB, 4-way set-associative cache
 //  - 8 words / block  (256-bit block)
 //  - 32-bit words
@@ -9,12 +9,12 @@
 //  - LRU replacement policy (true LRU, counter based)
 //
 //  Address breakdown (21 bits):
-//     | TAG  [20:11] (10b) | INDEX [10:3] (8b) | OFFSET [2:0] (3b) |
+//  | TAG  [20:11] (10b) | INDEX [10:3] (8b) | OFFSET [2:0] (3b) |
 //
 //  Geometry:
 //     32 KiB / (8 words * 4 B) = 1024 blocks
 //     1024 blocks / 4 ways     = 256 sets  -> INDEX_WIDTH = 8
-//============================================================================
+//==================
 
 module cache_controller
   #(
@@ -43,9 +43,9 @@ module cache_controller
     output logic                                  mwren
     );
 
-   //--------------------------------------------------------------------------
+   //----------
    // Derived local parameters
-   //--------------------------------------------------------------------------
+   //----------
    localparam WAY_WIDTH = $clog2(NWAYS);   // 2 bits for 4 ways
    localparam LRU_MAX   = NWAYS - 1;       // MRU rank value (3)
 
@@ -62,9 +62,9 @@ module cache_controller
 
    state_t current_state, next_state;
 
-   //--------------------------------------------------------------------------
+   //---------------
    // Address field positions
-   //--------------------------------------------------------------------------
+   //---------------
    localparam TAG_MSB           = 20;
    localparam TAG_LSB           = 11;
    localparam INDEX_MSB         = 10;
@@ -72,9 +72,9 @@ module cache_controller
    localparam BLOCK_OFFSET_MSB  = 2;
    localparam BLOCK_OFFSET_LSB  = 0;
 
-   //--------------------------------------------------------------------------
+   //----------------
    // Cache storage: organised as [set][way]
-   //--------------------------------------------------------------------------
+   //----------------
    logic                    cache_valid [0:NSETS - 1][0:NWAYS - 1];
    logic                    cache_dirty [0:NSETS - 1][0:NWAYS - 1];
    logic [TAG_WIDTH - 1:0]  cache_tag   [0:NSETS - 1][0:NWAYS - 1];
@@ -82,18 +82,18 @@ module cache_controller
    // LRU rank per way: LRU_MAX = most-recently-used, 0 = least-recently-used.
    logic [WAY_WIDTH - 1:0]  lru_cnt     [0:NSETS - 1][0:NWAYS - 1];
 
-   //--------------------------------------------------------------------------
+   //-----------------
    // Latched request
-   //--------------------------------------------------------------------------
+   //-----------------
    logic [ADDRESS_WIDTH - 1:0]  req_addr;
    logic                        req_read;
    logic                        req_write;
    logic [WORD_SIZE - 1:0]      req_wdata;
    logic [WAY_WIDTH - 1:0]      req_way;     // way being serviced this transaction
 
-   //--------------------------------------------------------------------------
+   //------------------
    // Active (combinational) request view
-   //--------------------------------------------------------------------------
+   //------------------
    logic [ADDRESS_WIDTH - 1:0]  active_addr;
    logic [INDEX_WIDTH - 1:0]    active_index;
    logic [TAG_WIDTH - 1:0]      active_tag;
@@ -106,9 +106,9 @@ module cache_controller
    logic [WAY_WIDTH - 1:0]      access_way;  // way chosen for this access
    logic [WORD_SIZE - 1:0]      read_data;
 
-   //--------------------------------------------------------------------------
+   //--------------
    // Block <-> word helpers
-   //--------------------------------------------------------------------------
+   //--------------
    function automatic logic [WORD_SIZE - 1:0] block_get_word(
       input logic [BLOCK_SIZE - 1:0]   block,
       input logic [OFFSET_WIDTH - 1:0] word_offset
@@ -127,17 +127,17 @@ module cache_controller
       return result;
    endfunction
 
-   //--------------------------------------------------------------------------
+   //----------------
    // Address decode
-   //--------------------------------------------------------------------------
+   //----------------
    assign active_addr    = (current_state == STATE_IDLE) ? caddress : req_addr;
    assign active_index   = active_addr[INDEX_MSB:INDEX_LSB];
    assign active_tag     = active_addr[TAG_MSB:TAG_LSB];
    assign active_offset  = active_addr[BLOCK_OFFSET_MSB:BLOCK_OFFSET_LSB];
 
-   //--------------------------------------------------------------------------
+   //--------------------------------
    // Associative lookup across the 4 ways of the selected set
-   //--------------------------------------------------------------------------
+   //--------------------------------
    integer wi;
    always_comb begin
       lookup_hit = 1'b0;
@@ -151,10 +151,10 @@ module cache_controller
       end
    end
 
-   //--------------------------------------------------------------------------
+   //------------------
    // Victim selection: first an invalid way if any, otherwise the LRU way
    // (the way whose LRU rank is 0).
-   //--------------------------------------------------------------------------
+   //------------------
    integer vj;
    logic   found_invalid;
    always_comb begin
@@ -182,9 +182,9 @@ module cache_controller
    assign hit       = lookup_hit;
    assign read_data = block_get_word(cache_mem[active_index][active_way], active_offset);
 
-   //--------------------------------------------------------------------------
+   //-----------------
    // Next-state / output logic
-   //--------------------------------------------------------------------------
+   //-----------------
    always_comb begin
       next_state = current_state;
       cdout      = '0;
@@ -260,9 +260,9 @@ module cache_controller
       endcase
    end
 
-   //--------------------------------------------------------------------------
+   //------------------
    // Sequential update
-   //--------------------------------------------------------------------------
+   //------------------
    integer su, ku;
    always_ff @(posedge clock) begin
       if (!rst_n) begin
